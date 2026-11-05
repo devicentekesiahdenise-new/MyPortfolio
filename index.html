@@ -6,6 +6,53 @@
 <title> Kesiah Denise De Vicente – IT Support Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
+.profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .profile-text {
+            flex: 1;
+        }
+
+        .profile-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .profile-text h2 {
+            font-size: 1.5rem;
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .profile-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+        }
 :root{--bg:#eef2f5;--surface:#fff;--ink:#14212b;--muted:#566873;--line:#cfd9e0;--accent:#1f6f8b;--ok:#1d7a4a;--okbg:#dff3e6;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a22;--surface:#16252f;--ink:#e6eef3;--muted:#9bb0bc;--line:#2a3d49;--accent:#6cc0dc;--ok:#7fd8a3;--okbg:#1b3a2b}}
