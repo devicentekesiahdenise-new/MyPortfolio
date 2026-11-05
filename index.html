@@ -40,6 +40,21 @@ footer{margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid var(--line);col
 </style>
 </head>
 <body>
+  <script>
+document.getElementById("copyEmail").addEventListener("click", function (e) {
+  e.preventDefault();
+  var btn = this, email = "kesiahdenise@gmail.com";
+  function done() {
+    btn.textContent = "Copied: " + email;
+    setTimeout(function () { btn.textContent = "Email me"; }, 2500);
+  }
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(email).then(done, function () { window.location.href = "mailto:" + email; });
+  } else {
+    window.location.href = "mailto:" + email;
+  }
+});
+</script>
 <main>
 <header>
 <div class="top">
@@ -50,7 +65,7 @@ footer{margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid var(--line);col
 <img class="photo" src="5ac4c5d5-47ee-4564-a541-4789770baf73.jpg"<circle cx="40" cy="38" r="16" fill="var(--line)"/><path d="M6 100c2-24 15-34 34-34s32 10 34 34z" fill="var(--line)"/></svg>
 </div>
 <p class="lead">I keep people’s computers working so they can get on with their day: reimaging desktops, fixing everyday problems, and explaining what went wrong in plain language.</p>
-<div class="btns"><a class="btn" href="https://mail.google.com/mail/?view=cm&to=kesiahdenise@gmail.com&su=Hello" target="_blank" rel="noopener">Email me</a><a class="btn alt" href="#experience">See my work</a></div>
+<div class="btns"><a class="btn" href="mailto:kesiahdenise@gmail.com" id="copyEmail">Email me</a><a class="btn alt" href="#experience">See my work</a></div>
 </header>
 
 <section id="about">
